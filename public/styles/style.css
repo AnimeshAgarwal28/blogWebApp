@@ -49,6 +49,7 @@ h1{
 
 form{
     width: 50%;
+    line-height: 180%;
 }
 
 label {
@@ -59,3 +60,10 @@ label {
 textarea {
     width: 80%;
   }
+
+#submit {
+    background-color:#D5CEA3;
+    border: #D5CEA3;
+    color: #1A120B;
+    cursor: pointer;
+}

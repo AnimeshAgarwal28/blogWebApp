@@ -20,7 +20,7 @@ app.get("/", (req, res)=>{
 });
 
 app.get("/blogs", (req, res)=>{
-    res.render("blogs.ejs", {titles: titles, authors: authors ,blog: blogs});
+    res.render("blogs.ejs", {titles: titles, authors: authors ,blogs: blogs, randomBlog: randomBlogIndex()});
 });
 
 app.get("/write", (req, res)=>{
@@ -31,9 +31,13 @@ app.post("/write", (req, res) => {
     titles.push(req.body["title"]);
     authors.push(req.body["author"]);
     blogs.push(req.body["blog"]);
-    res.render("write.ejs");
+    res.redirect("/write");
 });
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });
+
+function randomBlogIndex() {
+    return Math.floor(Math.random()*titles.length);
+}

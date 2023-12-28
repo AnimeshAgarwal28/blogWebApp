@@ -1,7 +1,18 @@
 <%- include("partials/header.ejs") %>
-<h1>Here's a random blog to read .</h1>
-<% for(let i=0; i<titles.length; i++) {%>
-    <h1><%= titles[i]; %></h1>
-    <h1><%= authors[i]; %></h1>
-<% } %>
+    <% if(titles.length>0){ %>
+        <h1>Here's a random blog to read <%= titles[randomBlog] %>.</h1>
+    <% } else { %>
+            <h1>Write your first blog.</h1>
+    <% } %>
+    <% for(let i=0; i<titles.length; i++) {%>
+        <h1>
+            <%= titles[i]; %>
+        </h1>
+        <h1>
+            <%= authors[i]; %>
+        </h1>
+        <h1>
+            <%= blogs[i] %>
+        </h1>
+        <% } %>
 <%- include("partials/footer.ejs") %>
