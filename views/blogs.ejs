@@ -1,0 +1,7 @@
+<%- include("partials/header.ejs") %>
+<h1>Here's a random blog to read .</h1>
+<% for(let i=0; i<titles.length; i++) {%>
+    <h1><%= titles[i]; %></h1>
+    <h1><%= authors[i]; %></h1>
+<% } %>
+<%- include("partials/footer.ejs") %>
