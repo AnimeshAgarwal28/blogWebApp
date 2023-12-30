@@ -68,6 +68,56 @@ textarea {
     cursor: pointer;
 }
 
+/* .blog-list {
+    margin: 5%;
+}
+
+#blog-content {
+    display: inline-block;
+    margin: 5%;
+    background-color: #D5CEA3;
+    height: 100vh;
+}
+
+.blogs-container{
+    display: flex;
+} */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .content-container {
+    display: flex;
+    flex: 1;
+  }
+
+  .blogs-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+}
+
 .blog-list {
-    
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.titles {
+  background-color: #D5CEA3;
+  color: #333;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.blog-content {
+  background-color: #D5CEA3;
+  padding: 20px;
 }

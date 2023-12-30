@@ -20,7 +20,7 @@ function loadBlog(index) {
         .then(response => response.text())
         .then(data => {
             // Update the HTML with the fetched blog content
-            $("#blog-content").html(data);
+            $(".blog-content").html(data);
         })
         .catch(error => console.error('Error:', error));
 }

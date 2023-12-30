@@ -1,15 +1,23 @@
 <%- include("partials/header.ejs") %>
-    <% if(titles.length>0){ %>
-        <h1>Here's a random blog to read <%= titles[randomBlog] %>.</h1>
-    <% } else { %>
-            <h1>Write your first blog.</h1>
-    <% } %>
-    <% for(let i=0; i<titles.length; i++) {%>
-        <div class="blog-list">
-            <button class="titles" onclick="loadBlog(<%= i %>);"><%= titles[i]; %></button>
-        </div>
-    <% } %>
-    <div id="blog-content">
-        <!-- Blog content will be displayed here -->
+    <div class="page-container">
+        <% if(titles.length>0){ %>
+            <h1>Here's a random blog to read <%= titles[randomBlog] %>.</h1>
+            <% } else { %>
+                <h1>Write your first blog.</h1>
+                <% } %>
+                <div class="content-container">
+                    <div class="blogs-container">
+                      <% for(let i=0; i<titles.length; i++) {%>
+                        <div class="blog-list">
+                          <button class="titles" onclick="loadBlog(<%= i %>);">
+                            <%= titles[i]; %>
+                          </button>
+                        </div>
+                      <% } %>
+                    </div>
+                    <div class="blog-content">
+                        No blog is selected.
+                      </div>
+                  </div>
     </div>
-<%- include("partials/footer.ejs") %>
+    <%- include("partials/footer.ejs") %>
