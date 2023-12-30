@@ -13,3 +13,14 @@ $("textarea").keyup(function(e) {
         $(this).height($(this).height()+1);
     };
 });
+
+function loadBlog(index) {
+    // Send an AJAX request to the server to fetch blog content for the selected index
+    fetch(`/blogs/${index}`)
+        .then(response => response.text())
+        .then(data => {
+            // Update the HTML with the fetched blog content
+            $("#blog-content").html(data);
+        })
+        .catch(error => console.error('Error:', error));
+}

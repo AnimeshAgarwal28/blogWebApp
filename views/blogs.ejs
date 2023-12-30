@@ -5,14 +5,11 @@
             <h1>Write your first blog.</h1>
     <% } %>
     <% for(let i=0; i<titles.length; i++) {%>
-        <h1>
-            <%= titles[i]; %>
-        </h1>
-        <h1>
-            <%= authors[i]; %>
-        </h1>
-        <h1>
-            <%= blogs[i] %>
-        </h1>
-        <% } %>
+        <div class="blog-list">
+            <button class="titles" onclick="loadBlog(<%= i %>);"><%= titles[i]; %></button>
+        </div>
+    <% } %>
+    <div id="blog-content">
+        <!-- Blog content will be displayed here -->
+    </div>
 <%- include("partials/footer.ejs") %>

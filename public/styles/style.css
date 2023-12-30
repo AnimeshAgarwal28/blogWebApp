@@ -19,7 +19,7 @@ header{
     grid: auto-flow dense/ 10% 10% 10%;
     justify-content: center;
 }
-button{
+.navbar{
     background-color:#D5CEA3;
     border: #D5CEA3;
     color: #1A120B;
@@ -66,4 +66,8 @@ textarea {
     border: #D5CEA3;
     color: #1A120B;
     cursor: pointer;
+}
+
+.blog-list {
+    
 }

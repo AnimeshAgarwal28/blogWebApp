@@ -34,6 +34,17 @@ app.post("/write", (req, res) => {
     res.redirect("/write");
 });
 
+app.get('/blogs/:index', (req, res) => {
+    const index = req.params.index;
+    if (index >= 0 && index < blogs.length) {
+        const blogContent = blogs[index];
+        res.send(blogContent);
+    } else {
+        res.status(404).send('Blog not found');
+    }
+});
+
+
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });
